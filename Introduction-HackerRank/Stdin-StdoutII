@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        //input
+        int numI = scanner.nextInt();
+        double numD = scanner.nextDouble();
+        scanner.nextLine();
+        String str = scanner. nextLine();
+        //output
+        System.out.println("String: "+str);
+        System.out.println("Double: "+numD);
+        System.out.println("Int: "+numI);
+        scanner.close();
+    }
+}
