@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int q,a,b,n;
+        q = sc.nextInt();
+        for (int i = 0; i < q; i++){
+            a = sc.nextInt();
+            b = sc.nextInt();
+            n = sc.nextInt();
+            int sum = a + (int) Math.pow(2,0) * b;
+            int sumB;
+            System.out.print(sum + " ");
+            for (int j = 1; j < n; j++){
+                sumB = (int)Math.pow(2,j) * b;
+                sum = sum + sumB;
+                System.out.print(sum + " ");
+            }
+            System.out.println();
+        }
+    }
+}
