@@ -1,0 +1,35 @@
+//criando uma class modelo
+class Bicycle{
+    //states
+    int cadence = 0;
+    int speed = 0;
+    int gear =1;
+    //methods
+    void changeCadence(int newValue){
+        cadence = newValue;
+    }
+    void changeGear(int newValue){
+        gear = newValue;
+    }
+    void speedUp(int increment){
+        speed += increment;
+    }
+    void applyBrakes(int decrement){
+        speed -= decrement;
+    }
+    void printStatus(){
+        System.out.println("cadence:" + cadence + " speed:"+ speed + " gear:" + gear);
+    }
+}
+//onde meu código vai rodar na class principal e onde vou criar meus objetos
+class Fabrica{
+    public static void main(String[] args) {
+        //create an object Bike
+        //all methods
+        Bicycle bike1 = new Bicycle();
+        bike1.changeCadence(50);
+        bike1.speedUp(10);
+        bike1.changeGear(2);
+        bike1.printStatus();
+    }
+}
