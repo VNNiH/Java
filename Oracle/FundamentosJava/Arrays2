@@ -1,0 +1,47 @@
+package Arrays;
+
+public class Matrizes {
+    public static void main(String[] args) {
+        //INICIALIZANDO UM ARRAY
+        //1 - Inicializando com direto com valores
+        // int [] arr = {1,2,3,4};
+        //2 - iniciando o tipo de array e instanciando
+        // inicializa o primeiro elemento
+        int [] anArray;
+        anArray = new int[3];
+        anArray[0] = 100;
+        anArray[1] = 200;
+        anArray[2] = 300;
+        //PRINT
+//        System.out.println("Element at index 0: "
+//                + anArray[0]);
+//        System.out.println("Element at index 1: "
+//                + anArray[1]);
+//        System.out.println("Element at index 2: "
+//                + anArray[2]);
+        //ARRAY MULTIDIMENSIONAIS
+        String [][] nomes = {
+                //array [0][2]
+                {"Sr. ", "Sra. ", "Sra. "},
+                //array[1][1]
+                {"Smith", "Jones"}
+        };
+//        System.out.println(nomes[0][0] + nomes[1][0]);
+        //Sr.Smith
+//        System.out.println(nomes[0][2] + nomes[1][1]);
+        //Ms.Jones
+        //nosso array tem 2 linhas 2 colunas
+        //atribuindo o length a uma variavel
+        int arrLength = nomes.length;
+        String[] copyFrom = {
+                "Affogato", "Americano", "Cappuccino", "Corretto", "Cortado",
+                "Doppio", "Espresso", "Frappucino", "Freddo", "Lungo", "Macchiato",
+                "Marocchino", "Ristretto" };
+
+        String[] copyTo = new String[7];
+        System.arraycopy(copyFrom, 2, copyTo, 0, 7);
+        for (String coffee : copyTo) {
+            System.out.print(coffee + " ");
+        }
+    }
+}
