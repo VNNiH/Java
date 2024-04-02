@@ -1,0 +1,77 @@
+package Operadores;
+interface Animal{
+    void grunir();
+}
+class Cavalo implements Animal{
+    String nome;
+
+    @Override
+    public void grunir() {
+        System.out.println("RHHHHHHHHHHH");
+    }
+}
+
+public class Operator {
+    public static void main(String[] args) {
+        //UNARIO
+//        int x = 1;
+        //postfix -> depois da expressão
+        //expr -- ; expr ++
+        //int z = x++;
+        //x = 2 ; z = 1
+        //OCORRE UMA AVALIAÇÃO DA EXPR E DEPOIS ICREMENTO
+
+        //prefix -> antes da expressão
+        //++expr ; --expre; -expr; +expr; ~expr; !expr
+        //OCORRE O INCREMENTO E DEPOIS AVALICAO DA EXPR
+//        int y = ++x;
+        //INVERTE OS VALORES BOOLEANS !TRUE = FALSE
+        boolean condition = true;
+        boolean negacao = !condition;
+        //Output: true ; false
+        //~ INVERTE OS BITS
+        int num = 5; // 0000 0101 -> 5
+        int comp = ~num;// 1111 1010 -> -6
+        //SHIFT
+        int numero = 5;// 0000 0101
+        // << 2 -> move 2 bits a esquerda
+        int result = numero << 2; //0001 0100
+        //os bits empurrados para direita ou esquerda
+        //são descartados e zeros sao adicionados
+        //cada deslocamento para esquerda equivale a multiplicar
+        //o valor por 2
+        System.out.println(result); // 20
+        // mesma coisa com o >> 2 -> mas para direita
+        //adiciona 0s p/ numeros positivos
+        //adiciona 1s p/ numeros negativos
+        int resultado = numero >> 2;
+        System.out.println(resultado);
+        //Shift Right Unsigned -> desloca bits a direita
+        //mas adiciona bits mais esquerdas com 0. Independente se é
+        //positivo ou negativo
+        num = -16; //1111 1111 1111 1111 1111 1111 1111 0000
+        result = num >>> 2; // 0011 1111 1111 1111 1111 1111 1111 1100
+        System.out.println(result);
+        ////INSTANCEOf verifica se um objeto é instanciado de uma determinada class
+        //VERIFICANDO SE É DA CLASS
+        Cavalo cavalo = new Cavalo();
+        cavalo.nome = "Juan";
+        boolean cavaloIsTrue = cavalo instanceof Cavalo;
+        System.out.println(cavaloIsTrue);
+        //VERIFICANDO SE É DA INTERFACE
+        boolean cavIsTrue = cavalo instanceof Animal;
+        System.out.println(cavIsTrue);
+        ////TERNARIO
+        int cinco = 5;
+        int quatro = 4;
+        //cinco é maior que quatro?
+        String status = (5 > 4) ? "Maior" : "Menor";
+        System.out.println(status);
+
+        int eu = 10;
+        int n = eu++%5;
+        System.out.println(eu);
+        System.out.println(n);
+
+    }
+}
