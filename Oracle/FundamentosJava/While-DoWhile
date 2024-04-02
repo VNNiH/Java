@@ -1,0 +1,27 @@
+package ControlFlowStatements;
+
+public class WhileDoWhile {
+    public static void main(String[] args) {
+        //while
+        //enquanto verdade executar
+        int count = 5;
+        //while(retorn bool)
+        while (count > 0){
+            System.out.println(count);
+            count--;
+            //enquanto count > 0 (true)
+            //isso vai rodar
+        }
+        //count > 0 (false)
+        //ele sai do bloco while
+        //
+        //do-while
+        //DO - FAÇA primeiro, cheque a condição DEPOIS
+        boolean condition = false;
+        do {
+            System.out.println("Sou o bloco Do");
+        }while (condition);
+        //mesmo a condição sendo falsa de cara
+        //o bloco primeiro executa para depois avaliar a condição
+    }
+}
