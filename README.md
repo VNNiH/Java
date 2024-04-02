@@ -5,7 +5,7 @@ Este repositório contem meus codigos em Java divididos entre resolução de alg
 ## Desafios de Algoritmos no HackerRank
 Neste diretório, você encontrará minhas soluções para desafios de algoritmos do HackerRank. Estes desafios são parte integrante da minha jornada de aprendizado em Java, onde busco aprimorar minhas habilidades de resolução de problemas e algoritmos.
 
-## Estudos seguindo a guia Oracle
+## Estudos da trilha Oracle
 Aqui estão os códigos relacionados aos meus estudos seguindo a guia Oracle para Java. Estou me dedicando a compreender os conceitos fundamentais recomendados pela Oracle, aprofundando meu conhecimento na linguagem e suas melhores práticas.
 
 ## Projetos Práticos
