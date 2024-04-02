@@ -1,0 +1,43 @@
+package Variables;
+class Exemplo{
+    //Var de instancia (campos nao estaticos)
+    int variavelDeInstancia;//var de instancia
+    static int variavelDeClass;
+    static final String CLASS_VARIAVEL_FINAL = "valor constante";
+    int year;
+    String name;//var de instancia
+    //se não usar private/protected antes de uma var
+    //entao por padrao ela é public
+    String color;//var de instancia
+    //p/ cada obj a color é independente da outra
+}
+
+public class Variables {
+   public static void main(String[] args) {
+       Exemplo obj1 = new Exemplo();
+       Exemplo obj2 = new Exemplo();
+       //instance variable
+       obj1.variavelDeInstancia = 10;
+       //class variable
+       Exemplo.variavelDeClass = 20;//valor comum a todos os obj da class
+       //Print
+//       System.out.println("Variável de Instância (obj1): " + obj1.variavelDeInstancia); //10
+//       System.out.println("Variável de Instância (obj2): " + obj2.variavelDeInstancia); //20
+//       System.out.println("Variável de Classe (estática): " + Exemplo.variavelDeClass); // 20
+//       System.out.println("Variavel de Classe(estática): "+ Exemplo.CLASS_VARIAVEL_FINAL);
+       //NOMEAÇÃO PADRAO DE JAVA (CASE-SENSITIVE)
+       //Desencorajado começar com $ ou _ -> Correto começar com letras
+       int $Dollar = 10;
+       String _Hello = "Hi";
+       System.out.println($Dollar + _Hello);
+   }
+//    Boas Práticas	Exemplos
+//    Começar com letra	idade, nome, saldo
+//    Evitar "$"	Não utilizar cifrão "$"
+//    Evitar "_"	Não começar com sublinhado "_"
+//    Usar palavras completas	saldoConta, velocidadeCarro, numeroItens
+//    Utilizar camel case para múltiplas palavras	nomeCompleto, valorTotal, idadeCliente
+//    Primeira letra minúscula e camel case para variáveis	numeroItens, idadeCliente, nomeCompleto
+//    Caractere de sublinhado apenas para constantes	NUMERO_MAXIMO, VALOR_PADRAO, COR_PRINCIPAL
+
+}
