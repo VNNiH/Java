@@ -1,0 +1,27 @@
+package ControlFlowStatements;
+
+public class BreakDemo {
+    public static void main(String[] args) {
+        //usando break junto de uma condição
+        //para parar o loop onde break foi declarado
+        int [] arrayOfInts ={10,40,50,60,70,80,90,100,110,120,130};
+        int searchFor = 100;
+        int i;
+        boolean foundIt = false;
+        for (i = 0; i < arrayOfInts.length; i++) {
+            if (arrayOfInts[i] == searchFor){
+                System.out.println("I found it in i: " + i);
+                foundIt = true;
+                break;
+            }
+            System.out.println(arrayOfInts[i]);
+        }
+        if (foundIt){
+            System.out.println("Found");
+        }else{
+            System.out.println("Not in the array");
+        }
+        //Nosso break junto de uma condição faz com que saissemos
+        //do loop i apos nossa condição estiver satisfeita(true)
+    }
+}
