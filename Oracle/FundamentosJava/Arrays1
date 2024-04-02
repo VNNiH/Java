@@ -1,0 +1,51 @@
+package Arrays;
+
+import java.sql.SQLOutput;
+import java.util.Random;
+
+public class ArrayCopyDemo {
+    public static void main(String[] args) {
+        //srcArr
+        String [] sourceArray = new String[10];
+        sourceArray[0] = "Vinicius";
+        sourceArray[1] = "Isabella";
+        sourceArray[2] = "Victor";
+        sourceArray[3] = "Gustavo";
+        sourceArray[4] = "Thomas";
+        sourceArray[5] = "Franci";
+        sourceArray[6] = "Antonio";
+        sourceArray[7] = "Marcos";
+        sourceArray[8] = "Tobias";
+        sourceArray[9] = "Claudia";
+        System.out.println(java.util.Arrays.toString(sourceArray));
+
+        //destArr
+        //Array precisa ser inicializado
+        String [] destinationArray = new String[10];
+        System.arraycopy(sourceArray,0,destinationArray,3 ,6);
+        //length determina quantos elementos vao ser copiados
+        //System.arraycopy(Obj Src,indexSrc,Obj Dest,indexPos,length);
+//        //FOR-EACH
+//        for(dataType name : colectionArr)
+        for (String elemento : destinationArray){
+            System.out.println(elemento);
+        }
+        System.out.println("New Array");
+        int[] numbers = new int[10];
+        Random random = new Random();
+        for (int i = 0; i < numbers.length ; i++) {
+            numbers[i] = random.nextInt(100) + 1;
+        }
+        for(int numeros : numbers){
+            System.out.println(numeros);
+        }
+        //copiando o array
+        int [] firstFiveNumbers = new int[5];
+        System.arraycopy(numbers,0,firstFiveNumbers,0,5);
+        System.out.println("COPY ARRAY");
+        for (int firstFive : firstFiveNumbers){
+            System.out.println(firstFive);
+        }
+
+    }
+}
