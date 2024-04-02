@@ -1,0 +1,61 @@
+package ControlFlowStatements;
+
+public class SwitchCase {
+    public static void main(String[] args) {
+        int dayOfWeek = 2;
+         String day;
+         switch (dayOfWeek){
+             //bloco Switch -> instruçoes dentro do case
+             case 1: day = "Sunday";
+             break;
+             case 2: day = "Monday";
+             break;
+             case 3: day = "Tuesday";
+             break;
+             case 4: day = "Wednesday";
+             break;
+             case 5: day = "Thursday";
+             break;
+             case 6: day = "Friday";
+             break;
+             case 7: day = "Saturday";
+             break;
+             //entrada default para contornar
+             //o input errado do user
+             default: day = "Invalid input";
+             break;
+         }
+
+         java.util.ArrayList<String> futureMonths =
+                 new java.util.ArrayList<String>();
+         int month = 8;
+         switch (month){
+             case 1:  futureMonths.add("January");
+             case 2:  futureMonths.add("February");
+             case 3:  futureMonths.add("March");
+             case 4:  futureMonths.add("April");
+             case 5:  futureMonths.add("May");
+             case 6:  futureMonths.add("June");
+             case 7:  futureMonths.add("July");
+             case 8:  futureMonths.add("August");
+             case 9:  futureMonths.add("September");
+             case 10: futureMonths.add("October");
+             case 11: futureMonths.add("November");
+             case 12: futureMonths.add("December");
+                 break;
+             default: break;
+         }
+         //no caso ele esta atribuindo o valor a um
+        //array e nos mostrando que sem o break
+        //o codigo roda solto pq nao tem como parar
+        //entao nos teriamos como output
+         if (futureMonths.isEmpty()){
+             System.out.println("Invalid month number");
+         }else{
+             for (String monthName : futureMonths){
+                 System.out.println(monthName);
+                 //august ate december
+             }
+         }
+    }
+}
