@@ -1,0 +1,30 @@
+package ControlFlowStatements;
+
+public class BreakLabelDemo {
+    public static void main(String[] args) {
+        int[][] arrayOfInts = {
+                { 32, 87, 3, 589 },
+                { 12, 1076, 2000, 8 },
+                { 622, 127, 77, 955 }
+        };
+        int searchfor = 2000;
+        int i;
+        int j = 0;
+        boolean foundIt = false;
+        //declarei o rotulo como search:
+        search:
+        for (i = 0; i < arrayOfInts.length; i++) {
+            for (j = 0; j < arrayOfInts[i].length; j++) {
+                if (arrayOfInts[i][j] == searchfor) {
+                    System.out.println("I found it in [i][j]: " + i + "  "+ j);
+                    foundIt = true;
+                    //sem o break search ele para apenas o loop j o loop i continua
+                    break search;
+                    //com o break logo apos eu satisfazer a condição o break
+                    //pula direto pro search
+                }
+                System.out.println(arrayOfInts[i][j]);
+            }
+        }
+    }
+}
