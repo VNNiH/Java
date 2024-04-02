@@ -1,0 +1,43 @@
+package ConceptsOOP;
+interface Dry{
+    public void ligar();
+    public void volume();
+    public void atenderChamada();
+}
+
+class Headset implements Dry{
+    String model;
+    String color;
+    boolean wireless;
+    int value;
+    void printStats(){
+        System.out.println("Color: "+ color +"\nModel: "+ model + "\nWireless: "+ wireless + "\nValue: "+ value);
+    }
+
+    @Override
+    public void ligar() {
+        System.out.println("Ligando..");
+    }
+
+    @Override
+    public void volume() {
+        System.out.println("Ajustando volume...");
+    }
+
+    @Override
+    public void atenderChamada() {
+        System.out.println("Hello?");
+    }
+}
+public class OOP {
+    public static void main(String[] args) {
+        Headset headset1 = new Headset();
+        headset1.color = "Black";
+        headset1.model = "HyperX";
+        headset1.wireless = false;
+        headset1.value = 500;
+        headset1.printStats();
+        headset1.ligar();
+        headset1.atenderChamada();
+    }
+}
