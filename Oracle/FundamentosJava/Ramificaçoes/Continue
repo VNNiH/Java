@@ -1,0 +1,17 @@
+package ControlFlowStatements;
+
+public class ContinueDemo {
+    public static void main(String[] args) {
+        //SEM ROTULO
+        //ele simplesmente pula o elemento em que i esta se o elemento
+        //satisfazer a condicao, ele pula diretamente pro começo
+        //i = 2 -> entao ele pula esse valor, e faz com q o loop continue
+        //sai de i=2 para i = 3, como 3 nao é par, ele da como false
+        //e vai direto pro sout(i)
+        for (int i = 0; i < 10; i++) {
+            if (i % 2 == 0)
+                continue;
+            System.out.println(i);
+        }
+    }
+}
