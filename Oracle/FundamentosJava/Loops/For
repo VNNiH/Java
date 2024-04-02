@@ -1,0 +1,35 @@
+package ControlFlowStatements;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class ForDemo {
+    public static void main(String[] args) {
+        //loop for -> iterar valores
+        //inicializacao ; condição ; incremento -> sao opcionais
+        //int i = variavel de escopo/local
+        //i,j,k nomes frequentes
+        for (int i = 0; i < 5; i++) {
+//            System.out.println(i);
+        }
+        //so para de iterar qnd condição = false
+        //repetição de loops ate que a condição especificada
+        //deixe de satisfazer
+        //inicializacao usado apenas 1 vez
+        //condicao e incremento -> ativados a cada iteração
+
+        //FOR-EACH -> ARRAYS
+        //Creio que é melhor para arrays
+        int [] numbers = {1,2,3,4,5,6,7,8,9,10};
+        for (int elemento : numbers){
+            System.out.println(elemento);
+        }
+        //for(Tipo nome : array){
+        // bloco };
+        //o nosso elemento tem de ser do mesmo tipo do array
+        System.out.println("Usando For");
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+    }
+}
