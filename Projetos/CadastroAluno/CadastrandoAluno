@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class CadastroAlunos {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int option;
+        do {
+            System.out.println("CADASTRO DE ALUNOS ");
+            System.out.println("1 - ADICIONAR ALUNO");
+            System.out.println("2 - SAIR           ");
+            System.out.print("Escolha uma opção:   ");
+            option = sc.nextInt();
+            sc.nextLine();
+            switch (option) {
+                case 1:
+                    Alunos alunos = new Alunos();
+                    System.out.println("Nome do aluno");
+                    alunos.nome = sc.nextLine();
+                    System.out.println("CPF do aluno");
+                    alunos.CPF = sc.nextLine();
+                    System.out.println("Aluno Cadastrado");
+                    alunos.printStatus();
+                    break;
+                case 2:
+                    System.out.println("Exit");
+                    break;
+                default:
+                    System.out.println("Opção inválida");
+            }
+        } while (option != 2);
+    }
+}
