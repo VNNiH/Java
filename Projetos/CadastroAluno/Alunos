@@ -1,0 +1,32 @@
+public class Alunos {
+    public String nome;
+    public String CPF;
+    int codigoDeMatricula = 1000;
+    public static String geradorDeMatricula(String CPF, int codigoDeMatricula) {
+        String thirdChar = "";
+        for (int i = 0; i < 3; i++) {
+            // Pegando 3 primeiros digitos do CPF
+            thirdChar += CPF.charAt(i);
+        }
+        String matrAluno = thirdChar + Integer.toString(codigoDeMatricula);
+        return matrAluno;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCPF() {
+        return CPF;
+    }
+
+    public int getCodigoDeMatricula() {
+        return codigoDeMatricula;
+    }
+
+    public void printStatus(){
+        System.out.println("Nome: " + nome);
+        System.out.println("CPF: " + CPF);
+        System.out.println("Matricula: " + geradorDeMatricula(CPF,codigoDeMatricula++));
+    }
+}
